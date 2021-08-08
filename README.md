@@ -1,27 +1,72 @@
-# PruebaTecnicaEon
+# Christian Michelle Torres Martínez
+## Prueba Técnica de Desarrollo Angular Empresa EON
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+[![N|Solid](https://eon.com.mx/wp-content/uploads/eon-igniting-business-main.png)](https://eon.com.mx/)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Ejercicio 1
 
-## Code scaffolding
+Crear un proyecto en angular con las mejores prácticas posibles.
+Utilizar cualquier librería o framework de estilos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ ```sh
+ Componentes
+ ```
+- header-component
+1. Debe contener el ruteo hacia los componentes creados.
+- empresa-component
+1. Debe consultar el servicio de "persona-service" para obtener un
+array de personas.
+2. Debe hacer uso del componente "tarjeta-presentacion-component",
+iterar cada persona del array enviándole la persona como parámetro.
+- tarjeta-presentacion-component
+1. Debe tener un parámetro de entrada llamado persona y mostrar los
+datos en forma de tarjeta.
+- footer-component
+1. Sin contenido en especial.
+```sh
+ Servicios
+ ```
+- persona-service
+2. método getPersonas que retorne un array de Personas (10 personas
+como mínimo, datos estáticos).
+```sh
+ Interfaces o DTO's
+ ```
+ - Persona
+• nombre - string
+• edad - number
+• frase - string
+• direccion - Direccion
 
-## Build
+- Dirección
+• id
+• calle
+• colonia
+• pais
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Ejercicio 2
 
-## Running unit tests
+Agregar al proyecto usado:
+- Componente FormularioPersona Utilizar Formularios Reactivos para la clase de Persona (por el momento sin la dirección) . 
+- Estudiar/Googlear @Output EventEmitter
+- Con una salida (EventEmitter<Persona>) Emita a la persona al dar click en submit, con ello agregarlo al
+array.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ejercicio 3
+Para el formulario de persona.
+- Agregar validaciones Required, minlength, pattern.
+- Mostrar las leyendas correspondientes si esto no se cumple (Utilizando Formularios Reactivos).
+. Agregar modales, Agregar Persona, Editar Persona, Eliminar Persona, con las
+validaciones correspondientes.
+```sh
+No es necesario persistir la información editada o agregada, con que solo
+se muestre que la información cambió mientras la página no se recargue es
+suficiente.
+```
 
-## Running end-to-end tests
+## Ejercicio 4
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Agregar al proyecto usado:
+- Consulta los posts listados en https://jsonplaceholder.typicode.com/posts
+- Usando mejores prácticas.
