@@ -1,0 +1,35 @@
+.buzon {
+  .buzon__titulo {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+    border-bottom: 1px solid var(--lt-color-gray-200);
+    margin-bottom: .5rem;
+    .mat-icon {
+      margin-right: .5rem;
+      color: white;
+      // background-color: var(--purple-primary);
+      background-color: #aeb9ff;
+      padding: 6px;
+      border-radius: 50%;
+    }
+    p {
+      margin: 0;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      // color: var(--purple-secondary);
+      color: var(--purple-primary);
+    }
+  }
+  .buzon__contenido {
+    border: 1px solid lightblue;
+    border: 1px dotted var(--light-gray);
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+}

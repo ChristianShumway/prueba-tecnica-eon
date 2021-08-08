@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --purple-primary: #363062;
+  --purple-secondary: #7356F1;
+  --orange: #FF8F16;
+  --gray-dark: #2A2A2A;
+  --gray: #6E6E6E;
+  --light-gray: #D7DAE3;
+  --yellow: #ebc66a;
+ }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap');
+
+html, body { 
+  height: 100%; 
+  // border: 1px solid red;
+}
+
+
+
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+img {
+  vertical-align: bottom;
+}
+
+.mat-drawer-container {
+  height: 100vh;
+}
+
+.padding-container {
+  padding: 1rem;
+}
+
+.wrap-right {
+  text-align: right;
+}
+
+.success-dialog {
+  color: white !important;
+  background-color:rgba(59, 154, 74, .9) !important;
+  .mat-simple-snackbar-action {
+    display: grid;
+    justify-items: center;
+    &::before {
+      font-family: 'Material Icons';
+      content: "done";
+      color: white !important;
+      font-size: 22px;
+    }
+  }
+}
+
+.error-dialog {
+  color: white !important;
+  background-color: rgba(211, 47, 47, .9) !important;
+  .mat-simple-snackbar-action {
+    display: grid;
+    justify-items: center;
+    &::before {
+      font-family: 'Material Icons';
+      content: "clear";
+      color: white !important;
+      font-size: 22px;
+    }
+  }
+}
+
+.warning-dialog {
+  color: white !important;
+  background-color:rgba(245, 178, 53, 0.9) !important;
+  .mat-simple-snackbar-action {
+    display: grid;
+    justify-items: center;
+    &::before {
+      font-family: 'Material Icons';
+      content: "warning";
+      color: white !important;
+      font-size: 22px;
+    }
+  }
+}
+
+.custom-dialog-container-delete .mat-dialog-container {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.mat-btn-delete {
+  color: #ff5b65;
+  background-color: transparent;
+}
+
+.mat-btn-edit {
+  color: #aeb9ff;
+  background-color: transparent;
+}
+
+.mat-drawer-content {
+  background-color: white;
+}
+
+// PARA FOOTER
+.mat-drawer-backdrop {
+  position: fixed !important;
+}
+
+// scroll color
+// ::-webkit-scrollbar {
+//   width: 4px;
+//   height: 2px;
+// }
+
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1;
+//   border-radius: 6px;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: var(--gray-dark);
+//   border-radius: 6px;
+//   &:hover {
+//     background: var(--yellow);
+//   }
+// }
+// end scroll color
+
+@media screen and (min-width: 599px) {
+  .padding-container {
+    padding: 2rem;
+  } 
+}
+
+@media screen and (min-width: 1024px) {
+  .padding-container {
+    padding: 3rem;
+  } 
+}

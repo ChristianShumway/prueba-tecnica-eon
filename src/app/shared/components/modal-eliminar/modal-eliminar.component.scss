@@ -1,0 +1,44 @@
+.title,
+.content,
+.actions{
+  justify-content: center;
+  text-align: center;
+}
+
+.mat-cancel{
+  background: var(--lt-color-background-light);
+  color: var(--purple-primary);
+}
+
+.mat-delete{
+  background: #f15757;
+  color: white;
+ }
+
+ ::ng-deep .mat-dialog-container {
+   border-radius: 16px;
+ }
+
+.mat-dialog-title{
+  background: #f15757;
+  padding: 20px 0 0 0 !important;
+  margin: 24px 0 0 0 !important;
+}
+
+mat-icon{
+  color: white !important;
+  font-size: 50px !important;
+  height: 50px;
+  width: 50px;
+}
+
+.mat-dialog-content{
+  background: #f15757;
+  background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+  color: white;
+  padding-top: 10px !important;
+}
+
+.mat-dialog-actions{
+  margin-bottom: 0 !important;
+}

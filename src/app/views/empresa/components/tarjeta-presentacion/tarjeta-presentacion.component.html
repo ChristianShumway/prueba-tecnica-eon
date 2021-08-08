@@ -1,0 +1,78 @@
+<mat-card class="card" *ngIf="persona" >
+  <div class="card__top">
+    <div class="card__top__wave">
+      <img src="assets/images/utils/shape-bg.png" alt="">
+    </div>
+  </div>
+  <div class="card__infopersona">
+    <div class="card__infopersona__img">
+      <img src="assets/images/personal/elvis-presley.jpg" alt="nombre persona" />
+    </div>
+    <div class="card__infopersona__datos">
+      <p class="card__infopersona__datos--nombre">{{persona.nombre}}</p>
+      <p class="card__infopersona__datos--edad">{{persona.edad}} años</p>
+      <div class="card__infopersona__datos__acciones">
+        <button 
+          class="card__infopersona__datos__acciones--eliminar" 
+          mat-icon-button 
+          [color]="'btn-delete'"
+          (click)="eliminarPersona(persona.id)"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button 
+          class="card__infopersona__datos__acciones--editar" 
+          mat-icon-button 
+          [color]="'btn-edit'"
+          (click)="modificarPersona(persona)"
+        >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="card__contenido">
+    <div class="card__contenido__direccion">
+      <p class="card__contenido__direccion--titulo">Dirección:</p>
+      <p class="card__contenido__direccion--dir" *ngIf="persona.direccion">
+        {{persona.direccion.calle}},
+        Colonía {{persona.direccion.colonia}},
+        {{persona.direccion.pais}}.
+      </p>
+      <p class="card__contenido__direccion--dir" *ngIf="!persona.direccion">
+        No existe registro de esta información.
+      </p>
+    </div>
+    <div class="card__contenido__frase">
+      <p>{{persona.frase}}.</p>
+    </div>
+  </div>
+</mat-card>
+
+<!-- <mat-card class="card-persona" *ngIf="persona">
+  <div class="card-persona__top">
+    <div class="card-persona__top__img">
+      <img src="assets/images/personal/elvis-presley.jpg" alt="nombre persona" />
+    </div>
+    <div class="card-persona__top__nombre">
+      <p>{{persona.nombre}}</p>
+      <span>{{persona.edad}} años</span>
+    </div>
+  </div>
+  <div class="card-persona__direccion">
+    <p>Dirección:</p>
+    <p *ngIf="persona.direccion">
+      {{persona.direccion.calle}},
+      Colonía {{persona.direccion.colonia}},
+      {{persona.direccion.pais}}.
+    </p> 
+  </div>
+  <div class="card-persona__frase">
+    <p> {{persona.frase}}</p>
+  </div>
+  <div class="card-persona__acciones">
+    <button (click)="eliminarPersona(persona.id)">Eliminar</button>  
+    <button (click)="modificarPersona(persona)">Modificar</button>   
+  </div>
+</mat-card> -->

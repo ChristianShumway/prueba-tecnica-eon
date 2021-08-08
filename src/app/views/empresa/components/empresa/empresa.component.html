@@ -1,0 +1,30 @@
+<section class="personal padding-container">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false" [(expanded)]="panelOpenState" class="personal__accordion">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="personal__accordion--titulo">
+          <mat-icon>person_add_alt_1</mat-icon>
+          Registro de Persona
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <app-formulario-persona (nuevoUsuarioClick) = "agregarNuevaPersona($event)" [accion]="accion"></app-formulario-persona>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <!-- ITEMS TARJETA DE PRESENTACIÖN -->
+  <div class="wrapper-personal" *ngIf="(dataSourcePersonas$ | async)?.length as personas; else noPersonas" [ngsRevealSet]="{ reset:false}" [ngsSelector]="'.detail'" [ngsReveal]="{ reset: true}">
+    <app-tarjeta-presentacion 
+    class="detail"
+      (personaModificar) = "cualPersonaModifico($event)" 
+      (personaEliminar) = "cualPersonaElimino($event)" 
+      *ngFor="let persona of dataSourcePersonas$ | async" 
+      [persona]="persona"
+    ></app-tarjeta-presentacion>
+  </div>
+
+  <ng-template #noPersonas >
+    <div class="no-personas">
+      <img src="assets/images/utils/not-found.jpg" alt="no se encontro registros" />
+    </div>
+  </ng-template>
+</section>

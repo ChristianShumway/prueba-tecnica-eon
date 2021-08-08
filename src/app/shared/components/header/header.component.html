@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav 
+    #drawer 
+    class="sidenav" 
+    [ngClass]="{hidden: !(isHandset$ | async)}"
+    fixedInViewport = "false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" 
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar>
+        <mat-icon aria-hiddenx="false" (click)="drawer.toggle()">close</mat-icon>
+        <span (click)="drawer.toggle()">Cerrar Menú</span>
+    </mat-toolbar>
+    <div color="primary" class="logo-into" @enterState>
+      <img src="assets/images/logos/logo-complete.png" alt="logotipo" />
+    </div>
+    <mat-nav-list>
+      <!-- (click)="appDrawer.toggle()"  -->
+      <a 
+      @enterStateLeft
+      *ngFor="let item of optionsMenu" 
+      (click)="drawer.toggle()" 
+      [routerLink]="['/', item.route]"
+      routerLinkActive="active">
+        <mat-icon aria-hiddenx="false">{{item.iconName}}</mat-icon>
+        {{item.displayName}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary"  [ngClass]="{'new-toolbar': changeSideNav}" [ngStyle]="{'height.px': changeSideNav ? 50  : 60 }">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async" @enterStateLeft>
+        <!-- <mat-icon aria-label="Side nav toggle icon">menu</mat-icon> -->
+        <img style="max-width: 24px;" src="assets/images/icons/menu.png" srcset="assets/images/icons/menu@2x.png" alt="icono menu" />
+      </button>
+      <div [ngClass]="{'new-wrap-logo': changeSideNav, 'wrap-logo': !changeSideNav}">
+       <a routerLink="/home"><img src="assets/images/logos/logo-branch-white.png" alt="logotipo" @enterState /></a> 
+      </div>
+      <span class="spacer"></span>
+      <div class="options-menu" @enterState>
+        <a 
+          [ngStyle]="{'font-size.px': changeSideNav ? 12  : 15 }"  
+          *ngFor="let item of optionsMenu" 
+          [routerLink]="['/', item.route]" 
+          routerLinkActive="active">
+            {{item.displayName}}
+        </a>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content>
+    </ng-content>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

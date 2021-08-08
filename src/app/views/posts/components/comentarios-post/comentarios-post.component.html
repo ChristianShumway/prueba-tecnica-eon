@@ -1,0 +1,11 @@
+<section class="buzon">
+  <div class="buzon__titulo" @enterState>
+    <mat-icon>speaker_notes</mat-icon>
+    <p>{{data.titulo}}</p>
+  </div>
+  <div class="buzon__contenido">
+    <div *ngFor="let comentario of data.comentarios">
+      <app-comentario [comentario]="comentario"></app-comentario>
+    </div>
+  </div>
+</section>

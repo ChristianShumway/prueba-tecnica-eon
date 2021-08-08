@@ -1,0 +1,32 @@
+.comentario {
+  background-color: var(--lt-color-gray-200);
+  background-color: rgb(241 243 249 / 62%);
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  font-family: 'Poppins';
+  // box-shadow: 0px 2px 2px -1px rgb(0 0 0 / 15%), 0px 4px 5px 1px rgb(0 0 0 / 10%), 0px 2px 5px -1px rgb(0 0 0 / 6%);
+  .comentario__texto--titulo {
+    font-weight: 500;
+    color: var(--purple-primary);
+    margin-bottom: .25rem;
+  }
+  .comentario__email {
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+    margin-bottom: .75rem;
+    .mat-icon {
+      margin-right: .5rem;
+    }
+    span {
+      margin: 0;
+      font-weight: 500;
+      color: var(--purple-secondary);
+    }
+  }
+  .comentario__texto--mensaje {
+    font-size: .75rem;
+    color: var(--gray-dark);
+  }
+}

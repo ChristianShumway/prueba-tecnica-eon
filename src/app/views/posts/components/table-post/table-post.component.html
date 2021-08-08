@@ -1,0 +1,43 @@
+<section class="mat-elevation-z8 padding-container">
+  <div  class="wrap-titulo-post" [style.background]="'url('+ img +')center no-repeat'">
+    <p  @enterStateTop>Posts</p>
+    <span  @enterStateBottom>{{dataSource.posts.length}} - Total</span>
+  </div>
+  <table mat-table class="full-width-table" matSort aria-label="Elements" @enterState>
+    <!-- Id -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+      <td mat-cell *matCellDef="let post" @enterState>{{post.id}}</td>
+    </ng-container>
+
+    <!-- Título -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        <p class="titulo-columna">Título</p>
+      </th>
+      <td mat-cell *matCellDef="let post" @enterState>{{post.title}}</td>
+    </ng-container>
+
+    <!-- Acciones -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Comentarios</th>
+      <td mat-cell *matCellDef="let post" class="td-contenido">
+        <!-- <button mat-stroked-button color="primary" (click)="verComentarios(post)">Comentarios <mat-icon>attach_file</mat-icon></button> -->
+        <button  class="button-icon" mat-mini-fab  (click)="verComentarios(post)" @enterState>
+          <mat-icon>mark_email_unread</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let post; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+      [length]="dataSource?.posts?.length"
+      [pageIndex]="0"
+      [pageSize]="10"
+      @enterStateBottom
+      [pageSizeOptions]="[5, 10, 20]">
+  </mat-paginator>
+</section>

@@ -1,0 +1,10 @@
+<div class="comentario" [ngsReveal]="{ reset: false}">
+  <p class="comentario__texto--titulo">
+    {{comentario.name}}
+  </p>
+  <div class="comentario__email">
+    <mat-icon>email</mat-icon>
+    <span>{{comentario.email}}</span>
+  </div>
+  <p class="comentario__texto--mensaje">{{comentario.body}}</p>
+</div>

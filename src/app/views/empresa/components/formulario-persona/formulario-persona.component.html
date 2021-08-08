@@ -1,0 +1,63 @@
+<section class="container-form">
+  <div>
+    <form [formGroup]="form" (submit)="accionPersona()">
+      <div fxLayout="row wrap">
+        <div fxFlex="100" fxFlex.gt-xs="100">
+          <div class="pb-1">
+            <mat-form-field class="full-width">
+              <input matInput name="nombre" formControlName="nombre" placeholder="Nombre">
+            </mat-form-field>
+            <div class="validaciones">
+              <small *ngIf="f['nombre'].hasError('required') && f['nombre'].touched" class="form-error-msg">
+                El nombre es un campo requerido
+              </small>
+              <small *ngIf="f['nombre'].hasError('minlength') && f['nombre'].touched" class="form-error-msg">
+                El nombre debe ser mayor a 3 caracteres
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div fxLayout="row wrap">
+        <div fxFlex="100" fxFlex.gt-xs="100">
+          <div class="pb-1">
+            <mat-form-field class="full-width">
+              <input matInput name="edad" formControlName="edad" placeholder="Edad">
+            </mat-form-field>
+            <div class="validaciones">
+              <small *ngIf="f['edad'].hasError('required') && f['edad'].touched" class="form-error-msg">
+                La edad es un campo requerido
+              </small>
+              <small *ngIf="f['edad'].hasError('pattern') &&  f['edad'].touched" class="form-error-msg">
+                La edad debe ser numérica
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div fxLayout="row wrap">
+        <div fxFlex="100" fxFlex.gt-xs="100">
+          <div class="pb-1">
+            <mat-form-field class="full-width">
+              <input matInput name="frase" formControlName="frase" placeholder="Frase">
+            </mat-form-field>
+            <div class="validaciones">
+              <small
+                *ngIf="f['frase'].hasError('required') && f['frase'].touched"
+                class="form-error-msg">
+                La frase conocida de la persona es un campo requerido
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="wrap-right button">
+        <button *ngIf="accion === 'alta'" mat-raised-button color="primary" [disabled]="form.invalid" type="submit">Registrar</button>
+        <button *ngIf="accion === 'modificacion'" mat-raised-button color="primary" [disabled]="form.invalid" type="submit">Modificar</button>
+      </div>
+    </form>
+  </div>
+</section>
