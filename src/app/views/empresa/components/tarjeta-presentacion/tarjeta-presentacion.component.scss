@@ -24,6 +24,7 @@
     left: 0;
     padding: 1rem;
     display: flex;
+    // border-bottom: 1px solid var(--lt-color-gray-100);
     .card__infopersona__img {
       width: 60px;
       height: 60px;
@@ -111,6 +112,9 @@
     }
     .card__contenido {
       min-height: 160px;
+      .card__contenido__direccion--dir {
+        min-height: 40px;
+      }
     }
 
   }

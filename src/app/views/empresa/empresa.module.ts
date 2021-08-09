@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@material/material.module';
 import { SharedModule } from '@shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {NgsRevealModule} from 'ngx-scrollreveal';
 
 import { EmpresaRoutingModule } from './empresa-routing.module';
 import { EmpresaComponent } from './components/empresa/empresa.component';
@@ -26,7 +25,6 @@ import { ModificarPersonaComponent } from './components/modificar-persona/modifi
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    NgsRevealModule
   ],
   entryComponents: [
     // FormularioPersonaComponent

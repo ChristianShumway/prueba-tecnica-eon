@@ -6,4 +6,5 @@ export interface Persona {
   edad: number;
   frase: string;
   direccion?: Direccion;
+  imagen?: string;
 }

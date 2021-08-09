@@ -18,7 +18,8 @@ export class PersonaService {
         calle: 'Calle 42 #15-34',
         colonia: 'La avenida las Palmas',
         pais: 'Colombia'
-      }
+      },
+      imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Gabriel_Garcia_Marquez.jpg/220px-Gabriel_Garcia_Marquez.jpg'
     },
     {
       id: 2,
@@ -30,7 +31,8 @@ export class PersonaService {
         calle: 'Oxford Street #1234',
         colonia: 'Liverpool',
         pais: 'Inglaterra'
-      }
+      },
+      imagen: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/John_Lennon_1969_%28cropped%29-Colorized.jpg/220px-John_Lennon_1969_%28cropped%29-Colorized.jpg'
     },
     {
       id: 3,
@@ -42,7 +44,8 @@ export class PersonaService {
         calle: 'Nine #89',
         colonia: 'Mile',
         pais: 'Jamaica'
-      }
+      },
+      imagen: 'https://los40es00.epimg.net/los40/imagenes/2020/06/15/los40classic/1592224638_964781_1592235274_noticia_normal.jpg'
     },
     {
       id: 4,
@@ -54,7 +57,8 @@ export class PersonaService {
         calle: 'Isla Negra #56',
         colonia: 'Parral',
         pais: 'Chile'
-      }
+      },
+      imagen: 'https://upload.wikimedia.org/wikipedia/commons/8/86/Pablo_Neruda_1963.jpg'
     },
     {
       id: 5,
@@ -66,7 +70,8 @@ export class PersonaService {
         calle: 'Arcetri #324',
         colonia: 'Toscana',
         pais: 'Gran Ducado de Toscana'
-      }
+      },
+      imagen: 'http://c.files.bbci.co.uk/B137/production/_103576354_galileo.jpg'
     },
     {
       id: 6,
@@ -78,7 +83,8 @@ export class PersonaService {
         calle: 'Princeton #6665',
         colonia: 'Nueva Jersey',
         pais: 'Estados Unidos'
-      }
+      },
+      imagen: 'https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_1445/https://grupoaristeo.com/wp-content/uploads/2019/05/albert-einstein.jpg'
     },
     {
       id: 7,
@@ -90,7 +96,8 @@ export class PersonaService {
         calle: 'Memphis #1234',
         colonia: 'Atlanta',
         pais: 'Estados Unidos'
-      }
+      },
+      imagen: 'http://2.bp.blogspot.com/-Hs_VRGGJpfM/TdqSGy1Rz3I/AAAAAAAAA4w/J4Mh8nfBnx4/s1600/martin-luther-king-color.jpg'
     },
     {
       id: 8,
@@ -102,7 +109,8 @@ export class PersonaService {
         calle: 'Hampstead #456-C',
         colonia: 'Freiberg',
         pais: 'Reino Unido'
-      }
+      },
+      imagen: ' https://i0.wp.com/hipertextual.com/wp-content/uploads/2018/10/sigmund_freud_5.jpg?fit=1200%2C800&ssl=1'
     },
     {
       id: 9,
@@ -114,7 +122,8 @@ export class PersonaService {
         calle: 'Nueva Delhi #235',
         colonia: 'Union de la India',
         pais: 'India'
-      }
+      },
+      imagen: 'https://www.biografiasyvidas.com/monografia/gandhi/fotos/gandhi_mahatma.jpg'
     },
     {
       id: 10,
@@ -126,7 +135,8 @@ export class PersonaService {
         calle: 'Tupelo #569',
         colonia: 'Graceland',
         pais: 'Estados unidos'
-      }
+      },
+      imagen: 'https://dam.esquirelat.com/wp-content/uploads/2021/01/elvis-presley-biografia-770x513.jpg'
     }
   ];
 

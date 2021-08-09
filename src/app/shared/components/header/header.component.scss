@@ -74,6 +74,7 @@
       top: 0;
       z-index: 2;
       background: var(--purple-primary);
+      background-image: linear-gradient(to bottom, #363062, #433a84, #5144a8, #614dcc, #7356f1);
     }
     &.new-toolbar {
       background-color: rgb(54 48 98 / 70%) !important;

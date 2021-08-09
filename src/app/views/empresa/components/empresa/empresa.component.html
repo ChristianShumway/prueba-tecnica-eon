@@ -12,7 +12,7 @@
   </mat-accordion>
 
   <!-- ITEMS TARJETA DE PRESENTACIÖN -->
-  <div class="wrapper-personal" *ngIf="(dataSourcePersonas$ | async)?.length as personas; else noPersonas" [ngsRevealSet]="{ reset:false}" [ngsSelector]="'.detail'" [ngsReveal]="{ reset: true}">
+  <div class="wrapper-personal" *ngIf="(dataSourcePersonas$ | async)?.length as personas; else noPersonas"  @enterState>
     <app-tarjeta-presentacion 
     class="detail"
       (personaModificar) = "cualPersonaModifico($event)" 

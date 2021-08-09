@@ -6,7 +6,8 @@
   </div>
   <div class="card__infopersona">
     <div class="card__infopersona__img">
-      <img src="assets/images/personal/elvis-presley.jpg" alt="nombre persona" />
+      <img *ngIf="persona.imagen" [src]="persona.imagen" [alt]="persona.nombre" />
+      <img *ngIf="!persona.imagen" src="https://www.tekcrispy.com/wp-content/uploads/2018/10/avatar.png" alt="persona no identidica" />
     </div>
     <div class="card__infopersona__datos">
       <p class="card__infopersona__datos--nombre">{{persona.nombre}}</p>

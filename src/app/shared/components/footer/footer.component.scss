@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--purple-primary);
-  height: 60px;
+  background-image: linear-gradient(to top, #363062, #433a84, #5144a8, #614dcc, #7356f1);
+  height: 80px;
   color: white;
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -11,13 +12,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     img {
       max-width: 32px;
-      margin-right: .5rem;
+      margin-bottom: .75rem;
     }
     p {
       margin: 0;
       font-size: .75rem;
+      text-align: center;
     }
   }
 }
@@ -27,10 +30,6 @@
     .footer__contenedor {
       img {
         max-width: 38px;
-        margin-right: 1rem;
-      }
-      p {
-        font-size: 1rem;
       }
     }
   }
