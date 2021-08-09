@@ -59,14 +59,63 @@ Para el formulario de persona.
 - Mostrar las leyendas correspondientes si esto no se cumple (Utilizando Formularios Reactivos).
 . Agregar modales, Agregar Persona, Editar Persona, Eliminar Persona, con las
 validaciones correspondientes.
-```sh
+`
 No es necesario persistir la información editada o agregada, con que solo
 se muestre que la información cambió mientras la página no se recargue es
 suficiente.
-```
+`
 
 ## Ejercicio 4
 
 Agregar al proyecto usado:
 - Consulta los posts listados en https://jsonplaceholder.typicode.com/posts
 - Usando mejores prácticas.
+
+
+ ```sh
+ Componente
+ ```
+Agregar el Componente "TablePostComponent".
+
+Objetivo del componente: 
+- Listar en una tabla los posts consultados
+
+Depende de:
+- Servicio "Post Service": para obtener el objeto, suscribir los datos (Observable)
+- Clase Post: ya que debe contener un Array de tipo Posts donde se almacene 
+- la respuesta satisfactoria.
+
+
+ ```sh
+ Servicio
+ ```
+ 
+ Objetivo del servicio: 
+ - Exponer un método llamado getList el cual retorne el Observable<Post[]> 
+ este proviene de http.get<Post[]>(url) donde la url es
+ https://jsonplaceholder.typicode.com/posts
+
+Depende de:
+
+- El servicio HttpClient , recordar consultar la documentación :
+ https://angular.io/guide/http, recuerden que cualquier servicio es una sola
+instancia la cual se inyecta en el constructor, es tomada como una
+variable/propiedad de la clase que es accedida por this.
+ 
+```sh
+ Interfaces o DTO's
+ ```
+ Agregar Interfaces o DTO´s necesarios para tipear las respuestas.
+ 
+ ## Ejercicio 5
+CONSULTAR LOS COMENTARIOS DE UN POST
+Requerimientos:
+- Agregar un botón de ver comentarios para cada elemento de la tabla de posts, al
+dar click, muestre los comentarios del post seleccionado.
+`
+API es la misma : https://jsonplaceholder.typicode.com/ <-- analizar y ver qué url te
+permite obtener los comentarios de un post
+`
+
+ ## Ejercicio 6
+Hacer uso de ViewChild en cualquier parte del proyecto que se adecue a este caso.
